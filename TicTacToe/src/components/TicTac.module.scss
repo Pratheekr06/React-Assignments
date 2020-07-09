@@ -1,0 +1,51 @@
+$border: 1px solid white;
+
+$margin: 50px auto;
+$mainColor: white;
+
+@mixin display($Display, $Padding) {
+  display: $Display;
+  padding: $Padding;
+}
+
+.Game {
+  margin: $margin;
+  color: $mainColor;
+}
+
+.Table {
+  display: table;
+  margin: $margin;
+}
+
+.Row {
+  display: table-row;
+}
+
+.Cell {
+  @include display(table-cell, 30px);
+  border: $border;
+}
+
+// .Cell1 {
+//   @include display(table-cell, 30px);
+//   @include border(none, 1px solid white);
+// }
+
+// .Cell2 {
+//   @include display(table-cell, 30px);
+//   @include border(1px solid white, none);
+// }
+
+// .Cell3 {
+//   @include display(table-cell, 30px);
+// }
+
+.Button {
+  border: 1px solid white;
+  background-color: black;
+  color: $mainColor;
+  border-radius: 5px;
+  @include display(null, 10px);
+  cursor: pointer;
+}
